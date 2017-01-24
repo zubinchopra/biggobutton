@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class MainActivity extends Activity {
 
@@ -20,9 +21,11 @@ public class MainActivity extends Activity {
 
         final Button bigGoButton = (Button)findViewById(R.id.biggobutton);
         bigGoButton.setOnClickListener(new View.OnClickListener(){
-            public void OnClick(View v){
-                bigGoButton.text
+            public void onClick(View v){
+                count++;
+                bigGoButton.setText("You have pushed me " + count + " times!");
             }
         });
+
     }
 }
